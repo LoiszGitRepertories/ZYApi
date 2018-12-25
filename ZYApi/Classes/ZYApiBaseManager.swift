@@ -20,7 +20,7 @@ open class ZYApiBaseManager: NSObject{
     
     public var isLoading : Bool = false //是否加载中
     
-    override init() {
+    public override init() {
         super.init()
         if self is ZYApiBaseManagerInHerator{
             inheritor = self as? ZYApiBaseManagerInHerator
