@@ -1,0 +1,16 @@
+PODS:
+  - ZYApi (0.1.0)
+
+DEPENDENCIES:
+  - ZYApi (from `../`)
+
+EXTERNAL SOURCES:
+  ZYApi:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  ZYApi: 736a298fb8240449e65c38c5b6f5cea46c88eb8b
+
+PODFILE CHECKSUM: b1b5d51578f32ff93b7deaedaa78da31ee7d121e
+
+COCOAPODS: 1.5.3

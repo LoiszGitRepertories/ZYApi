@@ -1,0 +1,6 @@
+framework module Pods_ZYApi_Example {
+  umbrella header "Pods-ZYApi_Example-umbrella.h"
+
+  export *
+  module * { export * }
+}

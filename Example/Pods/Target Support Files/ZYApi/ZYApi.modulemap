@@ -1,0 +1,6 @@
+framework module ZYApi {
+  umbrella header "ZYApi-umbrella.h"
+
+  export *
+  module * { export * }
+}
