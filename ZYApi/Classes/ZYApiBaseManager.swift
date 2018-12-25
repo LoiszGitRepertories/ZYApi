@@ -32,7 +32,7 @@ open class ZYApiBaseManager: NSObject{
         }
     }
     
-    convenience init(callback: ZYApiCallBackDelegate){
+    public convenience init(callback: ZYApiCallBackDelegate){
         self.init()
         delegate = callback
     }
