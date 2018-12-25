@@ -1,0 +1,11 @@
+use_frameworks!
+
+target 'ZYApi_Example' do
+  pod 'ZYApi', :path => '../'
+
+  target 'ZYApi_Tests' do
+    inherit! :search_paths
+
+    
+  end
+end
