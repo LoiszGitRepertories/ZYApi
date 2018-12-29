@@ -30,7 +30,7 @@ extension ZYApiBaseManager{
                 self.response = response
                 self.isLoading = false
                 
-                guard _inheritor.service.handleCommonError(self) else { return }
+                //guard _inheritor.service.handleCommonError(self) else { return }
                 
                 print(response.logString())
                 
