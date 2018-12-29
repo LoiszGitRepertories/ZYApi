@@ -18,5 +18,7 @@ public protocol ZYApiServiceProtocol: AnyObject {
     var httpHeaders: HTTPHeaders { get }
     //针对不同人开发的接口 进行处理  [参数的封装拼接、加密]
     func request(params: ZYParam?, methodName: String, requestType: HTTPMethod) -> DataRequest
-    func handleCommonError(_ apiManager: ZYApiBaseManager) -> Bool
+    //func handleCommonError(_ apiManager: ZYApiBaseManager) -> Bool
+    //底层请求成功 处理上层错误  返回服务器自定义的成功失败
+    func handleSuccessCommonError(_ apiManager: ZYApiBaseManager) -> Bool
 }

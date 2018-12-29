@@ -60,6 +60,8 @@ extension ZYApiBaseManager{
     
     //成功
     fileprivate func successOnCalling(){
+        guard let _inheritor = inheritor else { return }
+        guard _inheritor.service.handleSuccessCommonError(self) else {return}
         delegate?.requestSuccess(self)
     }
     
