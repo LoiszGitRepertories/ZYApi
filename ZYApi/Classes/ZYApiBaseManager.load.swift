@@ -58,14 +58,17 @@ extension ZYApiBaseManager{
     }
     
     
-    //成功
+    //成功 只要有数据返回  底层就是成功的
     fileprivate func successOnCalling(){
         guard let _inheritor = inheritor else { return }
-        guard _inheritor.service.handleSuccessCommonError(self) else {return}
+        guard _inheritor.service.handleCommonError(self) else {
+            failOnCalling(errorType: .ZYApiErrorCommon)
+            return
+        }
         delegate?.requestSuccess(self)
     }
     
-    //失败
+    //失败 除了commonError都是网络异常
     fileprivate func failOnCalling(errorType: ZYApiError){
         delegate?.requestFailure(self, errorType)
     }

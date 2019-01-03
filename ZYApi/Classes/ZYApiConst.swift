@@ -23,7 +23,7 @@ public enum ZYApiError{
     case ZYApiErrorNoNetWork         //无网络 除了超时以外，所有错误都当成是无网络
     case ZYApiErrorCancel            //请求取消
     
-    case ZYApiErrorServerCustom      //底层请求成功 but 服务器自定义的错误
+    case ZYApiErrorCommon      //调用方 自定义需要处理的异常
     //case ZYApiErrorNoError           //无错误
     //case ZYApiErrorNeedLogin         // 需要登陆
     //case ZYApiErrorNeedUpdateToken   // 需要重新刷新accessToken
