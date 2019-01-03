@@ -61,11 +61,12 @@ extension ZYApiBaseManager{
     //成功 只要有数据返回  底层就是成功的
     fileprivate func successOnCalling(){
         guard let _inheritor = inheritor else { return }
-        guard _inheritor.service.handleCommonError(self) else {
+        if _inheritor.service.handleCommonError(self){
+            delegate?.requestSuccess(self)
+        }else{
             failOnCalling(errorType: .ZYApiErrorCommon)
-            return
         }
-        delegate?.requestSuccess(self)
+        
     }
     
     //失败 除了commonError都是网络异常
